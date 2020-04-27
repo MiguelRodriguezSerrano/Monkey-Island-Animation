@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Londrina+Solid&display=swap');
+@font-face {
+    font-family: 'Monkey Island 1990 refined';
+    src: url(../../assets/MONKEYISLAND-1990-REFINED.TTF);
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+#bern{
+    position: relative;
+    bottom: 34px;
+    width: 112px;
+    height: 156px;
+    margin: auto;
+    background: red;
+    background: url(http://i.imgur.com/ifk0SLH.png) repeat-x;
+    background-position: 0;
+    animation: walk 1s steps(6) infinite;
+   
+}
+body{
+    background: #000;
+    cursor: crosshair;
+    overflow: hidden;
+    
+}
+@keyframes walk{
+    0%{background-position: 0;}
+    100%{background-position: -672px;}
+}
+
+#sky{
+    background:url(http://i.imgur.com/PhHVjgw.png) repeat-X; 
+    filter: grayscale(50%);
+    animation: changeColor 20s infinite, movebg 9s linear infinite;
+    
+}
+
+#sea{
+    background:url(http://i.imgur.com/h75XWy8.png) repeat-x;
+    position:relative;
+    top:145px; 
+    animation: movebg 9s linear infinite;
+    
+}
+
+@keyframes movebg{
+    0%{background-position: 550px;}
+    100%{background-position: 0;}
+}
+
+.buttons{
+    position: relative;
+    bottom: 200px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#playBtn{
+    font-family: 'Monkey Island 1990 refined';
+    font-size: 2em;
+    width: 15%;
+    height: 7vh;
+    background: none;
+    color: rgb(165, 28, 165);
+    border: 3px solid #791379;
+    cursor: crosshair;
+    
+}
+#pauseBtn{
+    font-family: 'Monkey Island 1990 refined';
+    margin: 20px;
+    font-size: 2em;
+    width: 15%;
+    height: 7vh;
+    background: none;
+    color: rgb(165, 28, 165);
+    border: 3px solid #791379;
+    cursor: crosshair;
+   
+}
+
+#playBtn:hover{
+    background: #a51ca5;
+    color: #fff;
+}
+#pauseBtn:hover{
+    background: #a51ca5;
+    color: #fff;
+}
+
+.hud{
+position: relative;
+top: -450px;
+right: 150px;
+ width: 60%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ color: #fff;
+ font-size: 2em;
+ font-family: 'Monkey Island 1990 refined';
+ color: #a51ca5
+}
+.actions{
+    margin-right: 10px;
+    text-align: center;
+}
+.actions2{
+    margin-right: 10px;
+    text-align: center;
+}
+.actions3{
+    margin-right: 10px;
+    text-align: center;
+}
+p{
+    padding: 10px;
+    border: 3px solid #791379;
+    margin-top: 10px;
+}
+p:hover{
+    background: #a51ca5;
+    color: #fff;
+}
+
+@keyframes changeColor{
+    0%{
+        filter: hue-rotate(0);
+    }
+    50%{
+        filter: hue-rotate(40deg);
+    }
+    100%{
+        filter: hue-rotate(0);
+    }
+}
